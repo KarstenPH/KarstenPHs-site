@@ -4,7 +4,7 @@ My site thingy, this is the repository for it.
 
 This is meant for my profile landing site
 
-Almost all code here is made by Cyan
+All code here is made by Cyan (for now)
 
 Other Contributors:
 Nobody (yet)
