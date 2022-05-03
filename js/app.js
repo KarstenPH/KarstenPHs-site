@@ -4,7 +4,7 @@ function redirectToLegacy() {
 		// if the user was redirected before, let's not force the user lol
 		if (!localStorage.getItem("redirected")) {
 			localStorage.setItem("redirected", true);
-			url = window.location.href + "/legacy/";
+			url = window.location.origin + "/legacy/";
 			window.location.href = "/legacy";
 		}
 	} catch (e) {
@@ -21,7 +21,7 @@ if (!localStorage.getItem("redirected")) {
 		localStorage.setItem("test", string);
 		var test = localStorage.getItem("test");
 		if (test != string) throw Error("localStorage doesn't work...");
-		if (!window.location && !window.location.href) throw Error("no href!");
+		if (!window.location || !window.location.href || !window.location.origin) throw Error("no href!");
 		ready();
 	} catch (e) {
 		redirectToLegacy(e);
