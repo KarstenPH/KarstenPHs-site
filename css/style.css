@@ -200,6 +200,7 @@ h4 {
 }
 
 body > * {
+	opacity: 1;
 	animation: 0.5s ease var(--delay, 0s) 1 normal forwards running swoosh-left;
 }
 
