@@ -51,10 +51,10 @@ p {
 	font-weight: 400;
 }
 .dim * {
-	color: rgba(255, 255, 255, 0.376);
+	color: #606060 !important;
 }
 .dim *.grey {
-	color: #606060;
+	color: rgba(255, 255, 255, 0.376) !important;
 }
 .grey {
 	color: rgba(255, 255, 255, 0.376);
@@ -197,4 +197,25 @@ h4 {
 		opacity: 1;
 		transform: none;
 	}
+}
+
+body > * {
+	animation: 0.5s ease var(--delay, 0s) 1 normal forwards running swoosh-left;
+}
+
+#wondershare,
+#subtitles {
+	margin: 20px 0;
+}
+
+#wondershare a,
+#subtitles a:last-child {
+	color: white;
+	background-color: #40a376;
+	background-image: linear-gradient(45deg, rgba(95, 100, 217, 0.769) 0%, rgba(64, 163, 118, 0.008) 75%);
+}
+
+#wondershare a:hover,
+#subtitles a:last-child:hover {
+	background-color: #30d98b !important;
 }
