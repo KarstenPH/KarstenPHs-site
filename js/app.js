@@ -11,5 +11,9 @@
 // or used addEventListener, this is because onload is very old
 // arrow functions started existing in 2015/2016
 window.onload = function () {
-	alert("Website is WIP!!!");
+	// delay so that website fully loads
+	// if we do not delay the alert will stop the page from loading
+	setTimeout(function () {
+		alert("Website is WIP!!!");
+	}, 1000);
 };
