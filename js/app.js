@@ -6,4 +6,10 @@
 // 	a.style.setProperty("--delay", (i + 1) / 10 + 0.5 + "s");
 // });
 
-alert("Website is WIP!!!");
+// we use this for browser support
+// notice how i did not use an arrow function (()=>{})
+// or used addEventListener, this is because onload is very old
+// arrow functions started existing in 2015/2016
+window.onload = function () {
+	alert("Website is WIP!!!");
+};

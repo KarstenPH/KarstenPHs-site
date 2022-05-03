@@ -199,8 +199,16 @@ h4 {
 	}
 }
 
+@keyframes ie-fix {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 body > * {
-	opacity: 1;
 	animation: 0.5s ease var(--delay, 0s) 1 normal forwards running swoosh-left;
 }
 
@@ -219,4 +227,26 @@ body > * {
 #wondershare a:hover,
 #subtitles a:last-child:hover {
 	background-color: #30d98b !important;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS */
+	body > * {
+		opacity: 1 !important;
+		animation: unset !important;
+	}
+}
+@supports (-ms-accelerator: true) {
+	/* Edge 12+ CSS */
+	body > * {
+		opacity: 1 !important;
+		animation: unset !important;
+	}
+}
+@supports (-ms-ime-align: auto) {
+	/* Edge 16+ CSS */
+	body > * {
+		opacity: 1 !important;
+		animation: unset !important;
+	}
 }
