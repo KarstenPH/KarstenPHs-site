@@ -49,8 +49,6 @@ function ready() {
 		};
 
 		function init() {
-			alert("Website is WIP!!!");
-
 			// this part is used to check if the user is using forced darkmode
 			// if the function exists
 			if (window.getComputedStyle) {
@@ -68,8 +66,8 @@ function ready() {
 						);
 						// forced darkmode mega cringe
 					}
-					// support IE
-					el.parentNode.removeChild(el);
+
+					el.remove();
 				} catch (e) {
 					console.error("forced dark mode check failed", e);
 				}

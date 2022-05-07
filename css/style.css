@@ -118,7 +118,9 @@ body > h1:first-child {
 	white-space: nowrap;
 	background-color: #450000;
 }
-#yt_links > a::after {
+#yt_links > a::after,
+#subtitles > a::after,
+#wondershare > a::after {
 	content: "";
 	position: absolute;
 	background-image: url(yt.svg);
@@ -128,6 +130,23 @@ body > h1:first-child {
 	background-size: cover;
 	top: 13px;
 }
+
+#wondershare > a::after {
+	background-image: url(cart.svg) !important;
+}
+
+#subtitles > a:nth-child(2):after,
+#subtitles > a:nth-child(4):after {
+	filter: invert(100%);
+}
+
+#subtitles > a:nth-child(odd):after {
+	background-image: url(download.svg) !important;
+}
+#subtitles > a:nth-child(even):after {
+	background-image: url(out.svg) !important;
+}
+
 #yt_links > a:first-child {
 	color: #00ff00;
 	background-image: linear-gradient(45deg, #7c44ab 0%, rgba(69, 0, 0, 0.008) 84%);
@@ -326,4 +345,44 @@ body > * {
 #noanimation:target > * {
 	animation: none !important;
 	opacity: 1;
+}
+
+#others > a:first-child {
+	background-color: rgb(0, 115, 158);
+	background-image: linear-gradient(45deg, rgb(0, 59, 82) 0%, rgba(0, 115, 158, 0.008) 100%);
+}
+
+#others > a:nth-child(2) {
+	background-color: rgb(52, 168, 83);
+	background-image: linear-gradient(45deg, rgb(66, 133, 244) 0%, rgba(52, 168, 83, 0.008) 100%);
+}
+
+#others > a:nth-child(3) {
+	background-color: rgb(145, 145, 145);
+	background-image: linear-gradient(45deg, rgb(84, 84, 84) 0%, rgba(145, 145, 145, 0.008) 100%);
+}
+
+#others > a:last-child {
+	background-color: rgb(0, 104, 179);
+	background-image: linear-gradient(45deg, rgb(0, 9, 102) 0%, rgba(0, 104, 179, 0.008) 100%);
+}
+
+#others > a:first-child:hover {
+	background-color: rgb(0, 184, 255);
+	background-image: linear-gradient(45deg, rgb(0, 59, 82) 0%, rgba(0, 115, 158, 0.008) 100%);
+}
+
+#others > a:nth-child(2):hover {
+	background-color: rgb(187, 0, 27);
+	background-image: linear-gradient(45deg, rgb(66, 133, 244) 0%, rgba(52, 168, 83, 0.008) 100%);
+}
+
+#others > a:nth-child(3):hover {
+	background-color: rgb(207, 207, 207);
+	background-image: linear-gradient(45deg, rgb(84, 84, 84) 0%, rgba(145, 145, 145, 0.008) 100%);
+}
+
+#others > a:last-child:hover {
+	background-color: rgb(0, 178, 255);
+	background-image: linear-gradient(45deg, rgb(0, 9, 102) 0%, rgba(0, 104, 179, 0.008) 100%);
 }
